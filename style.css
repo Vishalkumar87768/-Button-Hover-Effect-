@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+div{
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+   
+}
+
+
+button{
+    border: 0.25em solid rgb(217, 176, 255);
+    padding: 1em 3em;
+    color: rgb(217, 176, 255);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(100, 61, 136);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em rgb(217, 176, 255),
+     0 0 4em 1em rgba(191, 123, 255, 0.781),
+     inset 0 0 0 0.75em 0.25em rgb(217, 176, 255);
+    text-shadow: 0 0 0.5em rgb(217, 176, 255);
+    position: relative;
+    transition: all 0.3s;
+
+
+}
+
+
+button::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(191, 123, 255, 0.781); */
+    fill: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+    
+}
+
+
+button:hover{
+    color: rgb(100, 61, 136);
+    background-color: rgb(217, 176, 255);
+    box-shadow: 0 0 1em 0.25em rgb(217, 176, 255),
+     0 0 4em 2em rgba(191, 123, 255, 0.781),
+     inset 0 0 0.75em 0.25em rgb(217, 176, 255);
+
+}
+
+
+button:active{
+    box-shadow: 0 0 0.6em 0.25em rgb(217, 176, 255),
+     0 0 2.5em 2em rgba(191, 123, 255, 0.781),
+     inset 0 0 0.5em 0.25em rgb(217, 176, 255);
+}
